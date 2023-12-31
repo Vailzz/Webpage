@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box; /* calcula dimensiones para mantener el tamaño */
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:beige; /* o #222 */
+    color: black; /* Color de texto para contrastar con el fondo oscuro */
+    position: relative;
+    padding: 3rem;
+    height: 100%;
+}
+
+.welcome{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.about_me{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+img.myself{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+}
+
+img.escudo{
+
+    width: 200px;
+    height: auto;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.projects, .about_me, .hobbies{
+    view-timeline-name: --proyecto;
+    view-timeline-axis: block;
+
+    animation-timeline: --proyecto;
+    animation-name: show;
+
+    animation-range: entry 0% cover 70%;
+    animation-fill-mode: both;
+}
