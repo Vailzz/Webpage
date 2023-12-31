@@ -9,3 +9,46 @@ img.escudo{
     width: 200px;
     height: auto;
 }
+
+.welcome{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+img.myself{
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+
+}
+
+.about_me{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+
+.projects, .about_me, .hobbies{
+    view-timeline-name: --proyecto;
+    view-timeline-axis: block;
+
+    animation-timeline: --proyecto;
+    animation-name: show;
+
+    animation-range: entry 0% cover 70%;
+    animation-fill-mode: both;
+}
+
