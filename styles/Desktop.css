@@ -4,6 +4,10 @@
 	margin: 0;
 }
 
+.link{
+	display: inline;
+}
+
 img.escudo{
 
     width: 200px;
